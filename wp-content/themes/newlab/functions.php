@@ -112,9 +112,6 @@ function newlab_widgets_init() {
 add_action( 'widgets_init', 'newlab_widgets_init' );
 
 
-// Include the class (unless you are using the script as a plugin)
-require_once( 'vendors/wp-less/wp-less.php' );
-
 /**
  * Enqueue scripts and styles.
  */
