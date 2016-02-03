@@ -116,8 +116,8 @@ add_action( 'widgets_init', 'newlab_widgets_init' );
  * Enqueue scripts and styles.
  */
 function newlab_scripts() {
-	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array( 'jquery' ), '3.0.1', true );
-	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css', array(), '3.0.1', 'all' );
+	// wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap-dist/js/bootstrap.min.js', array( 'jquery' ), '3.0.1', true );
+	// wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/bootstrap-dist/css/bootstrap.min.css', array(), '3.0.1', 'all' );
 
 	wp_enqueue_style( 'less-style', get_stylesheet_directory_uri() . '/less/style.less' );
 	// wp_enqueue_style( 'newlab-style', get_stylesheet_uri() );

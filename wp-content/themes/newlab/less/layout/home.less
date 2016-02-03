@@ -1,9 +1,37 @@
 body.home {
   .intro-container {
+    position: relative;
+    text-align: center;
+
     .intro-image {
       img {
         max-width: 200%;
         margin-left: -50%;
+      }
+    }
+    h1 {
+      height: 50px;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .strike {
+      position: relative;
+      display: inline-block;
+      &:after {
+        display: block;
+        content: "";
+        border: 2px solid red;
+        height: 2px;
+        width: 100%;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        transform: rotate(-14deg);
       }
     }
     @media (min-width: 480px) {
@@ -16,4 +44,37 @@ body.home {
     }
 
   }
+
+  @media (min-width: 480px) {
+    .section-one {
+      .flex-box {
+        display: flex;
+      }
+      .col-right {
+        .col {
+          height: 50%;
+          width: 100%;
+          position: absolute;
+
+          &:first-child {
+            top: 0;
+            background-color: @color-grey-1;
+          }
+          &:last-child {
+            bottom: 0;
+            display: flex;
+          }
+        }
+      }
+      .col-left {
+        .text-over-img {
+          left: auto;
+          margin-top: @gutter;
+          margin-right: @gutter;
+          color: #fff;
+        }
+      }
+    }
+  }
+
 }
