@@ -1,28 +1,45 @@
+.white {
+  color: @white;
+}
+
+.black {
+  color: @black;
+}
+
 .btn-primary-outline {
   .btn-primary;
   text-transform: uppercase;
   border-radius: 0;
   background-color: transparent;
-  border: 2px solid #fff;
-  padding: 12px 25px;
+  border: 2px solid @white;
+  padding: 6px 15px;
 
   &, a {
-    display: block;
-    color: #fff;
+    display: inline-block;
+    color: @white;
     font-family: 'Oswald', sans-serif;
-    font-size: 19px;
+    font-size: 14px;
     font-weight: bold;
 
     &:hover {
-      background-color: #fff;
+      background-color: @white;
       text-decoration: none;
-      border-color: #fff;
-      color: #000;
+      border-color: @white;
+      color: @black;
     }
   }
 
-  &.invert {
-    border-color: #000;
+  @media (min-width: @screen-md-min) {
+    padding: 12px 25px;
+
+    &,a {
+      font-size: 19px;
+    }
+  }
+
+  &.black {
+    border-color: @black;
+    color: @black;
   }
 }
 
@@ -36,5 +53,5 @@
 }
 
 .bg-black {
-  background-color: #000;
+  background-color: @black;
 }

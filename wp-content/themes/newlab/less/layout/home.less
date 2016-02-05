@@ -1,80 +1,95 @@
 body.home {
-  .intro-container {
-    position: relative;
-    text-align: center;
+    .intro-container {
+        position: relative;
+        text-align: center;
 
-    .intro-image {
-      img {
-        max-width: 200%;
-        margin-left: -50%;
-      }
-    }
-    h1 {
-      height: 50px;
-      position: absolute;
-      margin: auto;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-    .strike {
-      position: relative;
-      display: inline-block;
-      &:after {
-        display: block;
-        content: "";
-        border: 2px solid red;
-        height: 2px;
-        width: 100%;
-        margin: auto;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        transform: rotate(-14deg);
-      }
-    }
-    @media (min-width: 480px) {
-      .intro-image {
-        img {
-          max-width: 100%;
-          margin-left: 0;
+        .intro-image {
+            display: block;
+            overflow: hidden;
+            img {
+                max-width: 200%;
+                margin-left: -50%;
+            }
         }
-      }
-    }
-
-  }
-
-  @media (min-width: 480px) {
-    .section-one {
-      .flex-box {
-        display: flex;
-      }
-      .col-right {
-        .col {
-          height: 50%;
-          width: 100%;
-          position: absolute;
-
-          &:first-child {
+        h1 {
+            height: 115px;
+            position: absolute;
+            margin: auto;
             top: 0;
-            background-color: @color-grey-1;
-          }
-          &:last-child {
             bottom: 0;
-            display: flex;
-          }
+            left: 0;
+            right: 0;
         }
-      }
-      .col-left {
-        .text-over-img {
-          left: auto;
-          margin-top: @gutter;
-          margin-right: @gutter;
-          color: #fff;
+        .strike {
+            position: relative;
+            display: inline-block;
+            &:after {
+                display: block;
+                content: "";
+                border: 2px solid red;
+                height: 2px;
+                width: 100%;
+                margin: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                transform: rotate(-14deg);
+            }
         }
-      }
+        @media (min-width: 480px) {
+            h1 {
+                height: 50px;
+            }
+            .intro-image {
+                img {
+                    max-width: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
+
     }
-  }
+
+    .sec-style-one {
+        .sec-details {
+            padding: @gutter;
+            text-align: center;
+        }
+        .sec-newsletter {
+            background-color: @dark-gray;
+        }
+
+        .sec-about {
+            background-color: @nero-gray;
+        }
+
+        @media (min-width: @screen-md-min) {
+            display: flex;
+
+            .col-right {
+                .col {
+                    height: 50%;
+                    width: 100%;
+                    position: absolute;
+
+                    &:first-child {
+                        top: 0;
+                        background-color: @dark-gray;
+                    }
+                    &:last-child {
+                        bottom: 0;
+                        display: flex;
+                    }
+                }
+            }
+            .col-left {
+                .text-over-img {
+                    left: auto;
+                    margin-top: @gutter;
+                    margin-right: @gutter;
+                }
+            }
+        }
+    }
 
 }
