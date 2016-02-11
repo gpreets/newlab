@@ -2,14 +2,11 @@ body.home {
     .intro-container {
         position: relative;
         text-align: center;
+        overflow: hidden;
 
-        .intro-image {
-            display: block;
-            overflow: hidden;
-            img {
-                max-width: 200%;
-                margin-left: -50%;
-            }
+        img.intro-image {
+            max-width: 200%;
+            margin-left: -50%;
         }
         h1 {
             height: 115px;
@@ -40,25 +37,19 @@ body.home {
             h1 {
                 height: 50px;
             }
-            .intro-image {
-                img {
-                    max-width: 100%;
-                    margin-left: 0;
-                }
+            img.intro-image {
+                max-width: 100%;
+                margin-left: 0;
             }
         }
 
     }
 
-    .sec-style-one {
+    .container-fluid.section {
         .sec-details {
             padding: @gutter;
             text-align: center;
         }
-        .sec-newsletter {
-            background-color: @dark-gray;
-        }
-
         .sec-about {
             background-color: @nero-gray;
         }
@@ -67,7 +58,7 @@ body.home {
             display: flex;
 
             .col-right {
-                .col {
+                .cols {
                     height: 50%;
                     width: 100%;
                     position: absolute;
