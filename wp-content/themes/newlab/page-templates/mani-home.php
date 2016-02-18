@@ -20,7 +20,7 @@ get_header(); ?>
 			MANI DA GHAR. REPLACE WITH THE CODE YOU HAVE WRITTEN.
 			FIRST COPY ALL THE CODE AND STYLES, YOU HAVE WRITTEN, IN A LOCAL FILE.
 			THEN DO git pull
-			then go to pages in wp-admin
+			
 			for homepage select the template "mani home"
 
 		</main><!-- #main -->
