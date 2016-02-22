@@ -83,4 +83,70 @@ body.home {
         }
     }
 
+    .blog-hdr {
+        margin: 0;
+        padding: 20px 10px;
+        background-color: @dark-gray;
+    }
+    .blogs-list {
+        background-color: @dark-gray;
+
+        dd {
+            .clearfix;
+        }
+
+        .blog-date {
+            font-size: 20px;
+            line-height: 1;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            color: @nero-gray;
+
+            @media (min-width: @screen-sm-min) {
+                font-size: 36px;
+                .make-sm-column(4);
+                padding-left: @gutter;
+
+                span {
+                    display: block;
+                    margin-left: -5px;
+                    font-size: 130px;
+                }
+            }
+        }
+
+        .blog-image {
+            .make-sm-column(8);
+            height: 215px;
+            overflow-y: hidden;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .blog-text {
+            text-align: center;
+
+            @media (min-width: @screen-sm-min) {
+                text-align: left;
+                padding: 0 @gutter;
+            }
+        }
+    }
+
+    .social-channels {
+        .pins-feed-list {
+            margin: 0;
+            padding: 0
+        }
+        .pins-feed-item {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
 }

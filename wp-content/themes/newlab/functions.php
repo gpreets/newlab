@@ -99,15 +99,27 @@ add_action( 'after_setup_theme', 'newlab_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function newlab_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'newlab' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	if ( function_exists('register_sidebar') ) {
+		register_sidebar( array(
+			'name'          => esc_html__( 'Sidebar', 'newlab' ),
+			'id'            => 'sidebar-1',
+			'description'   => '',
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		) );
+
+		register_sidebar( array(
+			'name'          => esc_html__( 'Sidebar Home', 'newlab' ),
+			'id'            => 'sidebar-home',
+			'description'   => '',
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		) );
+	}
 }
 add_action( 'widgets_init', 'newlab_widgets_init' );
 
@@ -116,7 +128,7 @@ add_action( 'widgets_init', 'newlab_widgets_init' );
  * Enqueue scripts and styles.
  */
 function newlab_scripts() {
-	// wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap-dist/js/bootstrap.min.js', array( 'jquery' ), '3.0.1', true );
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap-dist/js/bootstrap.min.js', array( 'jquery' ), '3.0.1', true );
 	// wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/bootstrap-dist/css/bootstrap.min.css', array(), '3.0.1', 'all' );
 
 	wp_enqueue_style( 'less-style', get_stylesheet_directory_uri() . '/less/style.less' );
@@ -156,3 +168,5 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+require get_template_directory() . '/plugins/pinterest-widget/pinterest-rss-widget.php';
