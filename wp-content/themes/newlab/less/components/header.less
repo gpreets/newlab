@@ -15,13 +15,16 @@
   }
 
   .menu-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99;
     background-color: @bright-gray;
     padding: 8px;
     color: @white;
-    width: 50px;
-    height: 50px;
     font-size: 35px;
     line-height: 1;
+    text-align: center;
     .transition(all 0.5s linear 0s);
   }
 
@@ -34,6 +37,10 @@
       width: 215px;
       height: 90px;
     }
+
+    .menu-toggle {
+      padding: 30px;
+    }
   }
 
   &.affix {
@@ -45,9 +52,17 @@
     }
 
     .menu-toggle {
-      width: 40px;
-      height: 40px;
       font-size: 25px;
+    }
+
+    @media (min-width: @screen-md-min) {
+      .logo {
+        width: 130px;
+        height: 60px;
+      }
+      .menu-toggle {
+        padding: 21px;
+      }
     }
   }
 }

@@ -18,6 +18,29 @@
        url('@{icon-font-path}@{icon-font-name}.svg#@{icon-font-svg-id}') format('svg');
 }
 
+@font-face {
+  font-family: 'fontello';
+  src: url('@{icon-font-path}fontello.eot');
+  src: url('@{icon-font-path}fontello.eot?#iefix') format('embedded-opentype'),
+       url('@{icon-font-path}fontello.woff') format('woff'),
+       url('@{icon-font-path}fontello.ttf') format('truetype'),
+       url('@{icon-font-path}fontello.svg#fontelloid') format('svg');
+}
+
+// @TODO: Figure out how to add these to local LESS folder
+// It didn't work as fonts path was not resolving.
+.fontello {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 // Catchall baseclass
 .glyphicon {
   position: relative;
