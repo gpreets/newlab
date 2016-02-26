@@ -1,3 +1,49 @@
+.footer-top {
+  overflow-x: hidden;
+
+  .sec-details {
+    padding-top: 10px;
+
+    h3,
+    .btn {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0 10px 0;
+    }
+  }
+
+  img {
+    max-width: none;
+    float: right;
+    margin-right: -55%;
+  }
+
+  @media (min-width: 400px) {
+    .sec-details {
+      padding-top: 30px;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-left: -1px;
+      }
+      h3,
+      .btn {
+        display: inline-block;
+        color: @black;
+        margin-right: 20px;
+      }
+    }
+    img {
+      float: none;
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+}
+
 .global-footer {
   background-color: rgba(0, 0, 0, 0.9);
   padding: @gutter/2 @gutter;

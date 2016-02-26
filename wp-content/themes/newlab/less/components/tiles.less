@@ -1,0 +1,36 @@
+.container-fluid.section {
+    position: relative;
+
+    .sec-details {
+        padding: @gutter;
+        text-align: center;
+    }
+
+    @media (min-width: @screen-md-min) {
+        display: flex;
+
+        .col-right {
+            .cols {
+                height: 50%;
+                width: 100%;
+                position: absolute;
+
+                &:first-child {
+                    top: 0;
+                    background-color: @dark-gray;
+                }
+                &:last-child {
+                    bottom: 0;
+                    display: flex;
+                }
+            }
+        }
+        .col-left {
+            .text-over-img {
+                left: auto;
+                margin-top: @gutter;
+                margin-right: @gutter;
+            }
+        }
+    }
+}

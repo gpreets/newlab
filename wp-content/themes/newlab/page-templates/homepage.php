@@ -29,7 +29,7 @@ get_header(); ?>
 						<p>A new approach to old methods – 1337Lab draws on years of experience in advancing clients’ business technology and management processes…</p>
 						<div><a class="btn btn-primary-outline white" href="#">learn more</a></div>
 					</div>
-					<span><img alt="" src="http://localhost:8888/newlab/wp-content/uploads/2016/02/m-buisness-woman.jpg"></span>
+					<span><img alt="" src="/newlab/wp-content/uploads/2016/02/m-buisness-woman.jpg"></span>
 				</div> -->
 
 				<?php add_tile(array(
@@ -39,7 +39,7 @@ get_header(); ?>
 						'content' => '<p>A new approach to old methods – 1337Lab draws on years of experience in advancing clients’ business technology and management processes…</p>',
 						'btnText' => 'learn more',
 						'href' => '#',
-						'image' => 'http://localhost:8888/newlab/wp-content/themes/newlab/images/m-buisness-woman.jpg',
+						'image' => '/newlab/wp-content/themes/newlab/images/m-buisness-woman.jpg',
 					)
 				); ?>
 
@@ -60,7 +60,6 @@ get_header(); ?>
 
 								<div><a class="btn btn-primary-outline white" href="#">learn more</a></div>
 							</div>
-							<span><img alt="" src=""></span>
 						</div>
 					</div>
 				</div>
@@ -74,10 +73,10 @@ get_header(); ?>
 
 						<div><a class="btn btn-primary-outline " href="#">Learn More</a></div>
 					</div>
-					<span><img alt="" src="http://localhost:8888/newlab/wp-content/uploads/2016/02/development-core-bg.jpg"></span>
+					<span><img alt="" src="/newlab/wp-content/uploads/2016/02/development-core-bg.jpg"></span>
 				</div>
 				<div class="col-md-6  class">
-					<span><img alt="" src="http://localhost:8888/newlab/wp-content/uploads/2016/02/developers.jpg"></span>
+					<span><img alt="" src="/newlab/wp-content/uploads/2016/02/developers.jpg"></span>
 				</div>
 			</div>
 
@@ -88,7 +87,7 @@ get_header(); ?>
 						<h3></h3>
 						<div><a class="btn btn-primary-outline " href=""></a></div>
 					</div>
-					<span><img alt="" src="http://localhost:8888/newlab/wp-content/uploads/2016/02/building-img.jpg"></span>
+					<span><img alt="" src="/newlab/wp-content/uploads/2016/02/building-img.jpg"></span>
 				</div>
 				<div class="col-md-6 black class">
 					<div class="sec-details text-over-img">
@@ -97,7 +96,7 @@ get_header(); ?>
 
 						<div><a class="btn btn-primary-outline black" href="#">learn more</a></div>
 					</div>
-					<span><img alt="" src="http://localhost:8888/newlab/wp-content/uploads/2016/02/core-bg-white.jpg"></span>
+					<span><img alt="" src="/newlab/wp-content/uploads/2016/02/core-bg-white.jpg"></span>
 				</div>
 			</div>
 
@@ -174,40 +173,23 @@ get_header(); ?>
 			<?php endif ?>
 
 			<!-- Social Channels -->
-			<div class="container-fluid section social-channels">
-				<div class="col-md-3 pinterest bg-black">
-					<h3>PINTEREST</h3>
+			<div class="container-fluid section social-channels bg-black">
+				<div class="col-md-3 pinterest">
+					<h2 class="header">PINTEREST</h2>
 					<?php echo do_shortcode( '[do_widget "Pinterest RSS Widget"]' );?>
-
-					<!--?php echo get_pins_feed_list(
-						$username='cdavdra',
-						$boardname,
-						$maxfeeds=1,
-						$divname='standard',
-						$printtext=NULL,
-						$target='samewindow',
-						$useenclosures='yes',
-						$thumbwidth='100%',
-						$thumbheight='auto',
-						$showfollow='none'); ?-->
-
 				</div>
-				<div class="col-md-6 youtube bg-dark-gray">
-					<h3>YOUTUBE</h3>
+				<div class="col-md-6 youtube">
+					<h2 class="header">YOUTUBE</h2>
 					<?php echo do_shortcode( '[do_widget "youtube channel"]' );?>
 				</div>
-				<div class="col-md-3 twitter bg-darker-gray">
-					<h3>TWEETS</h3>
+				<div class="col-md-3 twitter">
+					<h2 class="header">TWEETS</h2>
 					<?php echo do_shortcode( '[do_widget id=wptt_twittertweets-2]' );?>
 				</div>
 			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<!--?php if ( !function_exists('dynamic_sidebar')
-|| !dynamic_sidebar('sidebar-home') ) : ?-->
-<!--?php endif; ?-->
 
 <?php
 get_footer();

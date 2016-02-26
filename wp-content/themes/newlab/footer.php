@@ -33,6 +33,14 @@
 
 ?>
 
+<div class="footer-top container-fluid section">
+  <div class="sec-details text-over-img white">
+    <h3>CREATIVE PROCESS STARTS</h3>
+    <a class="btn btn-primary-outline" href="#">HERE</a>
+  </div>
+  <span><img alt="" src="/newlab/wp-content/themes/newlab/images/bg-footer-top.png"></span>
+</div>
+
 <footer class="container-fluid global-footer">
   <div class="col-md-6">
     <div class="footer-logo">

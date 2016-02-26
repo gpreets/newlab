@@ -33,7 +33,7 @@ body.home {
                 transform: rotate(-14deg);
             }
         }
-        @media (min-width: 480px) {
+        @media (min-width: @screen-md-min) {
             h1 {
                 height: 50px;
             }
@@ -43,44 +43,6 @@ body.home {
             }
         }
 
-    }
-
-    .container-fluid.section {
-        .sec-details {
-            padding: @gutter;
-            text-align: center;
-        }
-        .sec-about {
-            background-color: @nero-gray;
-        }
-
-        @media (min-width: @screen-md-min) {
-            display: flex;
-
-            .col-right {
-                .cols {
-                    height: 50%;
-                    width: 100%;
-                    position: absolute;
-
-                    &:first-child {
-                        top: 0;
-                        background-color: @dark-gray;
-                    }
-                    &:last-child {
-                        bottom: 0;
-                        display: flex;
-                    }
-                }
-            }
-            .col-left {
-                .text-over-img {
-                    left: auto;
-                    margin-top: @gutter;
-                    margin-right: @gutter;
-                }
-            }
-        }
     }
 
     .blog-hdr {
@@ -137,14 +99,55 @@ body.home {
     }
 
     .social-channels {
+        h2.header {
+            background-color: @black;
+            color: @white;
+            padding: 30px;
+            margin: 0;
+            font-size: 36px;
+            border-top: 1px dotted @very-light-gray;
+            border-bottom: 1px dotted @very-light-gray;
+
+            &:after {
+                display: inline-block;
+                float: right;
+                content: "\e804";
+                font-family: 'fontello';
+                font-size: 40px;
+                color: @white;
+            }
+        }
+        .twitter {
+            h2.header {
+                &:after {
+                    content: "\e80d";
+                }
+            }
+        }
+        .pinterest {
+            .widget-title {
+                display: none;
+            }
+            h2.header {
+                &:after {
+                    content: "\e803";
+                }
+            }
+        }
         .pins-feed-list {
             margin: 0;
-            padding: 0
+            padding: 0;
         }
         .pins-feed-item {
             img {
                 width: 100%;
                 height: auto;
+            }
+        }
+
+        @media (min-width: @screen-md-min)  {
+            h2.header {
+                border: none;
             }
         }
     }
