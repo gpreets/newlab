@@ -45,6 +45,48 @@ body.home {
 
     }
 
+    .sec-consult {
+        .sec-details {
+            height: 70%;
+            top: auto;
+        }
+    }
+    .sec-services {
+        padding: @gutter 0;
+
+        .sub-sec {
+            padding: 0 20px;
+        }
+    }
+
+    @media (min-width: @screen-md-min) {
+        .sec-consult {
+            .sec-details {
+                width: 53%;
+                top: 0;
+                left: auto;
+                height: auto;
+                text-align: right;
+            }
+        }
+        .sec-newsletter,
+        .sec-aboutus {
+            .sec-details {
+                text-align: left;
+            }
+        }
+        .sec-designdev,
+        .sec-entrepreneur {
+            .sec-details {
+                width: 60%;
+                height: 60%;
+            }
+        }
+        .sec-services {
+            padding: @gutter*2 0;
+        }
+    }
+
     .blog-hdr {
         margin: 0;
         padding: 20px 10px;
@@ -99,6 +141,7 @@ body.home {
     }
 
     .social-channels {
+
         h2.header {
             background-color: @black;
             color: @white;
@@ -108,19 +151,44 @@ body.home {
             border-top: 1px dotted @very-light-gray;
             border-bottom: 1px dotted @very-light-gray;
 
-            &:after {
-                display: inline-block;
-                float: right;
-                content: "\e804";
-                font-family: 'fontello';
-                font-size: 40px;
+            a {
+                text-decoration: none;
                 color: @white;
+
+                &:hover {
+                    color: @youtube;
+                }
+
+                &:after {
+                    display: inline-block;
+                    float: right;
+                    content: "\e804";
+                    font-family: 'fontello';
+                    font-size: 40px;
+                    font-weight: normal;
+                    color: @white;
+                }
             }
         }
         .twitter {
             h2.header {
-                &:after {
-                    content: "\e80d";
+                a {
+                    &:hover {
+                        color: @twitter;
+                    }
+                    &:after {
+                        content: "\e80d";
+                    }
+                }
+            }
+            h2.widget-title {
+                display: none;
+            }
+            .fetched_tweets {
+                padding: 0 20px;
+
+                li {
+                    background-color: transparent;
                 }
             }
         }
@@ -129,8 +197,13 @@ body.home {
                 display: none;
             }
             h2.header {
-                &:after {
-                    content: "\e803";
+                 a {
+                    &:hover {
+                        color: @pinterest;
+                    }
+                    &:after {
+                        content: "\e803";
+                    }
                 }
             }
         }

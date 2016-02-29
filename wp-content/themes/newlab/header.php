@@ -27,22 +27,30 @@
   <?php require get_template_directory() . '/page-templates/includes/tile.php'; ?>
   <?php require get_template_directory() . '/page-templates/includes/logo-svg.php'; ?>
 
-  <header id="masthead" class="site-header" role="banner" data-spy="affix" data-offset-top="0">
-    <div class="site-branding col-xs-6">
-      <?php add_logo_svg(array(
-          'textcolor' => '#fff',
-          'labcolor' => '#000',
-          'bgcolor' => '#fff',
-        )
-      ); ?>
-    </div><!-- .site-branding -->
+  <div class="outer-container">
+    <nav id="sidebar" class="sidebar-offcanvas" role="navigation">
+      <!-- <span class="navtoggle glyphicon glyphicon-remove pull-left white" data-toggle="collapse" data-target="#sidebar"></span> -->
+      <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+    </nav><!-- #site-navigation -->
 
-    <div class="main-navigation col-xs-6 col-sm-3 pull-right">
-      <span class="menu-toggle glyphicon glyphicon-menu-hamburger" aria-controls="primary-menu" aria-expanded="false" title="Primary Menu" data-toggle="collapse" data-target="#sidebar"></span>
+    <header id="masthead" class="site-header" role="banner" data-spy="affix" data-offset-top="60">
+      <div class="site-branding col-xs-10 col-sm-9">
+        <a href="/" title="home">
+          <?php add_logo_svg(array(
+              'textcolor' => '#fff',
+              'labcolor' => '#000',
+              'bgcolor' => '#fff',
+            )
+          ); ?>
+        </a>
 
-      <nav id="sidebar" class="sidebar-offcanvas" role="navigation">
-        <span class="glyphicon glyphicon-remove pull-left white" data-toggle="collapse" data-target="#sidebar"></span>
-        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-      </nav><!-- #site-navigation -->
-    </div>
-  </header><!-- #masthead -->
+        <?php if (!is_front_page()) { ?>
+          <span class="page-title"><?php echo wp_title(''); ?></span>
+        <?php } ?>
+
+      </div><!-- .site-branding -->
+
+      <div class="main-navigation col-xs-2 col-sm-3 pull-right">
+        <span class="navtoggle menu-toggle glyphicon glyphicon-menu-hamburger" aria-controls="primary-menu" aria-expanded="false" title="Primary Menu"></span>
+      </div>
+    </header><!-- #masthead -->

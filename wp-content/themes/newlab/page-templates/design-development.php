@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Services Entrepreneur
+ * Template Name: Design Development
  * The template for displaying all pages.
  *
  * This is the template that displays all pages by default.
@@ -14,17 +14,10 @@
  */
 
 get_header(); ?>
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area services">
 		<main id="main" class="site-main container-fluid" role="main">
-<div class="container bg-black">
-			MANI DA GHAR. REPLACE WITH THE CODE YOU HAVE WRITTEN.
-			FIRST COPY ALL THE CODE AND STYLES, YOU HAVE WRITTEN, IN A LOCAL FILE.
-			THEN DO git pull
-
-			for homepage select the template "mani home"
-</div>
+			Design Development
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php
 get_footer();

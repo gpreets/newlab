@@ -58,19 +58,29 @@
   </div>
 
   <div class="footer-social col-md-6">
-      <ul class="list-inline pull-right">
+      <ul class="list-inline">
         <li class="social-facebook fontello"><a href="https://www.facebook.com/pages/1337lab/884369791601922?ref=hl" target="_blank"><?php echo $glyphs['facebook']; ?></a></li>
         <li class="social-gplus fontello"><a href="https://plus.google.com/u/1/111209695353563384227/posts" target="_blank" class="fontello"><?php echo $glyphs['gplus']; ?></a></li>
         <li class="social-instagram fontello"><a href="http://www.instagram.com" target="_blank"></a></li>
         <li class="social-linkedin fontello"><a href="https://www.linkedin.com/pub/chet-dav/b8/829/357" target="_blank"></a></li>
-        <li class="social-pinterest fontello"><a href="https://in.pinterest.com/" target="_blank"></a></li>
+        <li class="social-pinterest fontello"><a href="https://www.pinterest.com/cdavdra/" target="_blank"></a></li>
         <li class="social-twitter fontello"><a href="https://twitter.com/the1337team" target="_blank"></a></li>
-        <li class="social-youtube fontello"><a href="http://www.youtube.com" target="_blank"></a></li>
+        <li class="social-youtube fontello"><a href="https://www.youtube.com/channel/UC_4OmTv-SwdBSLBo7s5XMmQ" target="_blank"></a></li>
       </ul>
   </div>
 </footer>
-
 <?php wp_footer(); ?>
+
+</div> <!-- outer-container form header.php -->
+
+
+<script type="text/javascript">
+jQuery( document ).ready(function() {
+    jQuery(".navtoggle").on('click', function(){
+      jQuery('body').toggleClass("nav-open");
+    });
+});
+</script>
 
 </body>
 </html>

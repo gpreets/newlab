@@ -33,7 +33,7 @@ get_header(); ?>
 				</div> -->
 
 				<?php add_tile(array(
-						'class' => 'col-md-6 white',
+						'class' => 'col-md-6 white sec-consult',
 						'textClass' => 'text-over-img',
 						'title'  => 'CONSULTANCY OFFICE',
 						'content' => '<p>A new approach to old methods – 1337Lab draws on years of experience in advancing clients’ business technology and management processes…</p>',
@@ -44,8 +44,8 @@ get_header(); ?>
 				); ?>
 
 				<div class="col-md-6 col-right">
-					<div class="class black cols bg-dark-gray text-center">
-						<div class="sec-details textclass">
+					<div class="black cols bg-dark-gray sec-newsletter">
+						<div class="sec-details">
 							<h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
 							<p>Get news and updates, business oriented tips for entrepreneurs and leaders. We deliver a weekly update with all the insights , controversies and news that will help you take better desicions.</p>
 							<div><a class="btn btn-primary-outline black" href="#">SUBSCRIBE</a></div>
@@ -53,7 +53,7 @@ get_header(); ?>
 					</div>
 
 					<div class="cols white">
-						<div class="col-md-6 white bg-nero-gray">
+						<div class="col-md-6 white bg-nero-gray sec-aboutus">
 							<div class="sec-details textclass">
 								<h3>ABOUT US</h3>
 								<p>Meet and Greet, Special Events, Premieres, Exclusive Merchandising and more awesome stuff.</p>
@@ -66,7 +66,7 @@ get_header(); ?>
 			</div>
 
 			<div class="container-fluid section">
-				<div class="col-md-6  white">
+				<div class="col-md-6 white sec-designdev">
 					<div class="sec-details text-over-img">
 						<h3>DESIGN AND DEVELOPMENT CORE</h3>
 						<p>This is where the code is written, and the choice of fonts and colors is put together. At the end without our developers…</p>
@@ -82,14 +82,10 @@ get_header(); ?>
 
 
 			<div class="container-fluid section">
-				<div class="col-md-6  class">
-					<div class="sec-details text-over-img">
-						<h3></h3>
-						<div><a class="btn btn-primary-outline " href=""></a></div>
-					</div>
+				<div class="col-md-6">
 					<span><img alt="" src="/newlab/wp-content/uploads/2016/02/building-img.jpg"></span>
 				</div>
-				<div class="col-md-6 black class">
+				<div class="col-md-6 black sec-entrepreneur">
 					<div class="sec-details text-over-img">
 						<h3>ENTREPRENEUR WELCOME</h3>
 						<p>your idea’s from whiteboard to market.Its simply – You have an idea we help you build it. Today there is more and more people looking to build their own technology business…</p>
@@ -100,42 +96,43 @@ get_header(); ?>
 				</div>
 			</div>
 
-
-			<h3 class="text-center">WHAT WE DO</h3>
-			<div class="container-fluid section">
-				<div class="col-md-4 black class">
-					<div class="sec-details textclass">
-						<?php add_logo_svg(array(
-								'bgcolor' => '#FF8400',
-							)
-						); ?>
-						<h3 class="orange">ENTREPRENEUR WELCOME</h3>
-						<p>Your idea’s from whiteboard to market.Its simply – You have an idea we help you build it. Today there is more and more people looking to build their own technology business, not all have the necessary skills …</p>
-						<div><a class="btn btn-primary-outline black" href="#">learn more</a></div>
+			<div id="services" class="sec-services">
+				<h3 class="text-center services-header">WHAT WE DO</h3>
+				<div class="container-fluid section">
+					<div class="col-md-4 black sub-sec">
+						<div class="sec-details textclass">
+							<?php add_logo_svg(array(
+									'bgcolor' => '#FF8400',
+								)
+							); ?>
+							<h3 class="orange">ENTREPRENEUR WELCOME</h3>
+							<p>Your idea’s from whiteboard to market.Its simply – You have an idea we help you build it. Today there is more and more people looking to build their own technology business, not all have the necessary skills …</p>
+							<div><a class="btn btn-primary-outline black" href="#">learn more</a></div>
+						</div>
+						<span><img alt="" src=""></span>
 					</div>
-					<span><img alt="" src=""></span>
-				</div>
-				<div class="col-md-4 black class">
-					<div class="sec-details textclass">
-						<?php add_logo_svg(array(
-								'bgcolor' => '#14519A',
-							)
-						); ?>
-						<h3 class="blue">ENTREPRENEUR WELCOME</h3>
-						<p>Your idea’s from whiteboard to market.Its simply – You have an idea we help you build it. Today there is more and more people looking to build their own technology business, not all have the necessary skills …</p>
-						<div><a class="btn btn-primary-outline black" href="#">learn more</a></div>
+					<div class="col-md-4 black sub-sec">
+						<div class="sec-details textclass">
+							<?php add_logo_svg(array(
+									'bgcolor' => '#14519A',
+								)
+							); ?>
+							<h3 class="blue">ENTREPRENEUR WELCOME</h3>
+							<p>Your idea’s from whiteboard to market.Its simply – You have an idea we help you build it. Today there is more and more people looking to build their own technology business, not all have the necessary skills …</p>
+							<div><a class="btn btn-primary-outline black" href="#">learn more</a></div>
+						</div>
+						<span><img alt="" src=""></span>
 					</div>
-					<span><img alt="" src=""></span>
-				</div>
-				<div class="col-md-4 black class">
-					<div class="sec-details textclass">
-						<?php add_logo_svg(array(
-								'bgcolor' => '#A6CE37',
-							)
-						); ?>
-						<h3 class="green">ENTREPRENEUR WELCOME</h3>
-						<p>Your idea’s from whiteboard to market.Its simply – You have an idea we help you build it. Today there is more and more people looking to build their own technology business, not all have the necessary skills …</p>
-						<div><a class="btn btn-primary-outline black" href="#">learn more</a></div>
+					<div class="col-md-4 black sub-sec">
+						<div class="sec-details textclass">
+							<?php add_logo_svg(array(
+									'bgcolor' => '#A6CE37',
+								)
+							); ?>
+							<h3 class="green">ENTREPRENEUR WELCOME</h3>
+							<p>Your idea’s from whiteboard to market.Its simply – You have an idea we help you build it. Today there is more and more people looking to build their own technology business, not all have the necessary skills …</p>
+							<div><a class="btn btn-primary-outline black" href="#">learn more</a></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -144,7 +141,7 @@ get_header(); ?>
         $latest_post = new WP_Query("showposts=4");
         if($latest_post->have_posts()) :
 	    ?>
-			<h3 class="text-center blog-hdr">FROM OUR BLOG</h3>
+			<h3 id="blogslist" class="text-center blog-hdr">FROM OUR BLOG</h3>
 			<div class="container-fluid section blogs-list">
 				<dl class="col-xs-10 col-xs-offset-1">
 					<?php
@@ -175,15 +172,15 @@ get_header(); ?>
 			<!-- Social Channels -->
 			<div class="container-fluid section social-channels bg-black">
 				<div class="col-md-3 pinterest">
-					<h2 class="header">PINTEREST</h2>
+					<h2 class="header"><a href="https://www.pinterest.com/cdavdra/" target="_blank">PINTEREST</a></h2>
 					<?php echo do_shortcode( '[do_widget "Pinterest RSS Widget"]' );?>
 				</div>
 				<div class="col-md-6 youtube">
-					<h2 class="header">YOUTUBE</h2>
+					<h2 class="header"><a href="https://www.youtube.com/channel/UC_4OmTv-SwdBSLBo7s5XMmQ" target="_blank">YOUTUBE</a></h2>
 					<?php echo do_shortcode( '[do_widget "youtube channel"]' );?>
 				</div>
 				<div class="col-md-3 twitter">
-					<h2 class="header">TWEETS</h2>
+					<h2 class="header"><a href="https://twitter.com/the1337team" target="_blank">TWEETS</a></h2>
 					<?php echo do_shortcode( '[do_widget id=wptt_twittertweets-2]' );?>
 				</div>
 			</div>

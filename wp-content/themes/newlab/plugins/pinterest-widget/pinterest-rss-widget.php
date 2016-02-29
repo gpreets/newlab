@@ -105,7 +105,7 @@ function get_pins_feed_list($username, $boardname, $maxfeeds=25, $divname='stand
 				$content .= '</ul>';
 				$content .= '<script type="text/javascript">';
 				$content .= 'jQuery(document).ready(function() {';
-				$content .= "jQuery('.pins-feed-item img').nailthumb({width:".$thumbwidth.",height:".$thumbheight."})";
+				// $content .= "jQuery('.pins-feed-item img').nailthumb({width:".$thumbwidth.",height:".$thumbheight."})";
 				$content .= '}); </script>';
 					$pinterest_followButton = plugins_url('follow-on-pinterest-button.png', __FILE__);
 					if ($showfollow == 'large') {

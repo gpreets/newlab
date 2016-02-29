@@ -4,10 +4,22 @@
     .sec-details {
         padding: @gutter;
         text-align: center;
+
+        h3 {
+          margin-top: 0;
+        }
     }
 
     @media (min-width: @screen-md-min) {
         display: flex;
+
+        .sec-details {
+            padding: @gutter * 2;
+
+            .btn {
+              margin-top: 10px;
+            }
+        }
 
         .col-right {
             .cols {

@@ -6,26 +6,24 @@
 
   .site-branding {
     padding-left: 10px;
+    padding-bottom: 10px;
   }
 
   .logo {
     width: 130px;
     height: 60px;
     .transition(all 0.5s linear 0s);
+    display: inline-block;
+    vertical-align: middle;
   }
 
-  .menu-toggle {
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 99;
-    background-color: @bright-gray;
-    padding: 8px;
+  .page-title {
+    border-left: 2px solid @white;
+    padding-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
     color: @white;
-    font-size: 35px;
-    line-height: 1;
-    text-align: center;
-    .transition(all 0.5s linear 0s);
+    font-size: 12px;
   }
 
   @media (min-width: @screen-md-min) {
@@ -36,6 +34,10 @@
     .logo {
       width: 215px;
       height: 90px;
+    }
+
+    .page-title {
+      font-size: 24px;
     }
 
     .menu-toggle {
@@ -61,7 +63,7 @@
         height: 60px;
       }
       .menu-toggle {
-        padding: 21px;
+        padding: 22px;
       }
     }
   }
