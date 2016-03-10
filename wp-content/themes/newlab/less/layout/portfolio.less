@@ -1,0 +1,54 @@
+.content-area.portfolio {
+    .page-hed {
+        text-align: center;
+        padding: 40px 0;
+        background-color: @black;
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .sec-lancome {
+        background-color: @purple;
+
+        .cols {
+            padding: 0 @gutter;
+        }
+
+        @media (min-width: @screen-md-min) {
+            .col-right {
+                float: right;
+            }
+        }
+    }
+
+    .slide-container {
+        position: relative;
+
+        h2 {
+            text-align: center;
+        }
+
+        .slide-content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: -100%;
+            overflow-y: scroll;
+            .transition(all 0.5s ease-out);
+
+            &.open {
+                right: 0;
+            }
+        }
+
+        @media (min-width: @screen-md-min) {
+            .slide {
+                padding: @gutter*2;
+            }
+        }
+    }
+}

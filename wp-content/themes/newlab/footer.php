@@ -76,9 +76,28 @@
 
 <script type="text/javascript">
 jQuery( document ).ready(function() {
+    var $ = jQuery;
+
     jQuery(".navtoggle").on('click', function(){
       jQuery('body').toggleClass("nav-open");
     });
+
+    function slideToggle(e) {
+      var $this   = $(this);
+      var $target = $($this.attr('data-target'));
+
+      if($target) {
+        var $dismiss = $("[data-dismiss='slide-content']", $target);
+        $dismiss.on('click', function() {
+          $target.removeClass("open");
+        });
+      }
+
+      if ($this.is('a')) e.preventDefault();
+      $target.toggleClass("open");
+    }
+
+    $("[data-toggle='slide-content']").on('click', slideToggle);
 });
 </script>
 
