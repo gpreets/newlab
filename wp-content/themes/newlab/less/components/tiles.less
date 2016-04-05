@@ -29,7 +29,6 @@
 
                 &:first-child {
                     top: 0;
-                    background-color: @dark-gray;
                 }
                 &:last-child {
                     bottom: 0;
@@ -42,6 +41,41 @@
                 left: auto;
                 margin-top: @gutter;
                 margin-right: @gutter;
+            }
+        }
+    }
+
+    .sec-flex-columns {
+        display: flex;
+        flex-direction: column;
+
+        .sec-col {
+            flex: 1;
+        }
+    }
+
+    .sec-flex-rows {
+        display: flex;
+
+        .sec-row {
+            flex: 1;
+        }
+    }
+
+    .eqh-rows-2 {
+        position: relative;
+
+        @media (min-width: @screen-md-min) {
+            .eqh-row {
+                position: absolute;
+                height: 50%;
+
+                &:first-child {
+                    top: 0;
+                }
+                &:last-child {
+                    bottom: 0;
+                }
             }
         }
     }

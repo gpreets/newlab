@@ -78,7 +78,7 @@
 jQuery( document ).ready(function() {
     var $ = jQuery;
 
-    jQuery(".navtoggle").on('click', function(){
+    jQuery(".navtoggle, .sidebar-offcanvas").on('click', function(){
       jQuery('body').toggleClass("nav-open");
     });
 

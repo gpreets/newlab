@@ -40,6 +40,10 @@
   &.white {
     border-color: @white;
     color: @white;
+
+    &:hover {
+      color: @black;
+    }
   }
 
   &.black {
@@ -55,4 +59,10 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+@media(max-width: @screen-sm-max) {
+  .hidden-sm-down {
+    display: none;
+  }
 }

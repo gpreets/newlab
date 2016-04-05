@@ -13,14 +13,104 @@
     .sec-lancome {
         background-color: @purple;
 
-        .cols {
-            padding: 0 @gutter;
+        .sec-details {
+            text-align: center;
+            padding: @gutter;
+
+            h3 {
+                margin-top: 0;
+            }
+
+            .btn {
+                display: block;
+                margin-bottom: 20px;
+            }
         }
 
         @media (min-width: @screen-md-min) {
-            .col-right {
+            .sec-details {
                 float: right;
+                text-align: left;
+
+                .btn {
+                    display: inline-block;
+                }
             }
+        }
+    }
+
+    .sec-virgil {
+        img {
+            margin-top: 100px;
+        }
+
+        @media (min-width: @screen-md-min) {
+            img {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .sec-university-ottawa,
+    .sec-art-of-giving {
+        .sec-flex-rows {
+            flex-direction: column;
+
+            @media (min-width: @screen-md-min) {
+                flex-direction: row;
+            }
+        }
+    }
+
+    .sec-barbie {
+        .sec-details {
+            position: relative;
+            padding-bottom: 0;
+        }
+
+        @media (min-width: @screen-md-min) {
+            .sec-details {
+                position: absolute;
+            }
+
+            img {
+                width: 70%;
+                vertical-align: bottom;
+            }
+            .col-left {
+                text-align: right;
+            }
+        }
+    }
+
+    .sec-seatow {
+        .sec-details {
+            left: auto;
+            text-align: right;
+        }
+    }
+
+    .sec-bevmax {
+        .sec-details {
+            left: auto;
+            text-align: left;
+        }
+    }
+
+    .sec-virgil,
+    .sec-txt-right {
+        text-align: center;
+
+        @media (min-width: @screen-md-min) {
+            text-align: right;
+        }
+    }
+
+    .sec-txt-left {
+        text-align: center;
+
+        @media (min-width: @screen-md-min) {
+            text-align: left;
         }
     }
 
