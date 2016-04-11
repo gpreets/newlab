@@ -19,7 +19,7 @@ get_header(); ?>
 
 			<div class="intro-container intro white" >
 				<img class="intro-image" alt="1137Lab" src="<?php bloginfo("template_directory");?>/images/m-welcome-banner.jpg" title="Homepage Welcome Banner" />
-				<h1>welcome to the creative <span class="strike">agency</span> lab</h1>
+				<div class="intro-hed"><h1>welcome to the creative <span class="strike">agency</span> lab</h1></div>
 			</div>
 
 			<div class="container-fluid section">

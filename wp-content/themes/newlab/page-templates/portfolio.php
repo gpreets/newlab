@@ -20,7 +20,7 @@ get_header(); ?>
             <h1>PORTFILIO</h1>
         </div>
 
-        <div class="container-fluid.section slide-container sec-lancome white clearfix">
+        <div class="container-fluid section slide-container sec-lancome white clearfix">
             <div class="col-md-6 sec-details">
                 <h3>Lancome app of color</h3>
                 <p>We teamed up with Attention again, this time to design and develop House of Color, a Facebook app for Lancôme. Its centerpiece, the Magic Mirror Virtual Makeup Tool, allows users to try out different eye shadow palettes on their Facebook pictures. It was a fun and challenging project that put us in charge of R&amp;D, design, and development. Check out the live House of Color app or take a look at our video case study:</p>
