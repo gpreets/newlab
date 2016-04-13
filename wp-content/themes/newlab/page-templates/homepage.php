@@ -17,6 +17,12 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main container-fluid" role="main">
 
+			<?php
+      while ( have_posts() ) : the_post();
+				the_content();
+      endwhile; // End of the loop.
+      ?>
+
 			<div class="intro-container intro white" >
 				<img class="intro-image" alt="1137Lab" src="<?php bloginfo("template_directory");?>/images/m-welcome-banner.jpg" title="Homepage Welcome Banner" />
 				<div class="intro-hed"><h1>welcome to the creative <span class="strike">agency</span> lab</h1></div>

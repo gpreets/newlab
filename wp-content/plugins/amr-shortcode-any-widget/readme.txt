@@ -2,7 +2,7 @@
 Contributors: anmari
 Tags: shortcode, widget, page, templates, page template, widget_area, sidebar
 Tested up to: 4.4.1
-Version: 3.1
+Version: 3.2
 Stable tag: trunk
 
 == Description ==
@@ -10,16 +10,22 @@ Insert a widget or multiple widgets or a entire widget area (sidebar) into a pag
 
 Set up your widget first in a normal sidebar.  Check it works. 
 THEN Drag your chosen widgets to the sidebar called "widgets for shortcode".   
+
 Add the do_widget shortcode to the page where you would like the widget to appear.
 
-Using a widget more than once? Reference a specific widget instance from the do_widget shortcode, or the chosen sidebar from the do_widget_area shortcode.  Eg: [do_widget id=widget-n]
+Using a widget more than once? 
+
+Reference a specific widget instance from the do_widget shortcode, or the chosen sidebar from the do_widget_area shortcode.  Eg: [do_widget id=widget-n]
 
 For example: You could use the query posts widget in the page to create a archive within a page, or the rss widget to list feed content from other sites.  For more details see [anmari.com](http://webdesign.anmari.com/category/plugins/shortcode-any-widget/)
 
 The plugins default action is that it will magically find the settings for your themes sidebar and use the sidebar html to control the widgets output.  In most cases this means the widget will be styled as per the rest of your theme.  If that does not look good, parameters exist to try override this behaviour.  
+
 EG: in twenty-fourteen theme widget text ends up being white on white! widget_classes=none fixes that. Eg: [do_widget widget_classes=none yourwidget]
 
-Changed your theme and worried about losing the sidebar settings ? No problem, the plugin will save and restore the widgets_for_shortcode settings.  On display it will then pick up the new themes sidebar settings.  
+Changed your theme and worried about losing the sidebar settings ? 
+
+No problem, the plugin will save and restore the widgets_for_shortcode settings.  On display it will then pick up the new themes sidebar settings.  
 
 **Note:**
 
@@ -154,6 +160,10 @@ If you only using widget, maybe inserting the whole sidebar or widgertarea would
 
 
 == Changelog ==
+
+= Version 3.2 =
+*  tweaked some error messages and handle situation better where there are no widgets or possibly empty sidebars.
+
 
 = Version 3.1 =
 *  added code for the widget-id to appear in the widget settings window.

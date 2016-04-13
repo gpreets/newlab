@@ -31,11 +31,14 @@ take the first one that matches */
 global $_wp_sidebars_widgets;	
 
 	foreach ($_wp_sidebars_widgets as $sidebarid => $sidebar) {	
-		foreach ($sidebar as $i=> $w) {		
-			if ($w == $wid) { 
-				return 	$sidebarid;
-			}	
-		};	
+		
+		if (is_array($sidebar) ) { // ignore the 'array version' sidebarid that isnt actually a sidebar
+			foreach ($sidebar as $i=> $w) {		
+				if ($w == $wid) { 
+					return 	$sidebarid;
+				}	
+			};	
+		}	
 	}
 	return (false); // widget id not in any sidebar
 }

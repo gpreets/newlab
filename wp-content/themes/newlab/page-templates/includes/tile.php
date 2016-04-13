@@ -33,16 +33,21 @@ function add_tile( $obj ) {
 
   // half-width with text over image
   if($obj['style'] === 'sec-50') {
-    $elm = '<div class="col-md-6 sec-50 '.$obj['class'].'" >';
-    $elm .= '<div class="sec-details '.$obj['textClass'].'">';
-    $elm .= $obj['title'] ? ('<h3>'.$obj['title'].'</h3>') : '';
-    $elm .= $obj['content'] ? $obj['content'] : '';
-    $elm .= $obj['btnText'] ? '<div class="sec-button"><a class="btn btn-primary-outline '.$obj['color'].'" href="'.$obj['href'].'">'.$obj['btnText'].'</a></div>' : '';
-    $elm .= '</div>';
-    $elm .= $obj['image'] ? '<img alt="" src="'.$obj['image'].'">' : '';
-    $elm .= '</div>';
+    $elmStart = '<div class="section-tile col-md-6 sec-50 '.$obj['class'].' '.$obj['color'].'" >';
 
-    echo $elm;
+    $content = '';
+    if($obj['content'] || $obj['content'] !== '') {
+      $content .= '<div class="sec-details '.$obj['textClass'].'">';
+      $content .= $obj['title'] ? ('<h3>'.$obj['title'].'</h3>') : '';
+      $content .= $obj['content'] ? $obj['content'] : '';
+      $content .= $obj['btnText'] ? '<div class="sec-button"><a class="btn btn-primary-outline '.$obj['color'].'" href="'.$obj['href'].'">'.$obj['btnText'].'</a></div>' : '';
+      $content .= '</div>';
+    }
+
+    $image = $obj['image'] ? '<img alt="" src="'.$obj['image'].'">' : '';
+    $elmEnd = '</div>';
+
+    echo $elmStart.$content.$image.$elmEnd;
   }
 
   // half page width with further divided half with image and text.
@@ -63,11 +68,12 @@ function add_tile( $obj ) {
 
   // half page width with further divided half with image and text.
   if($obj['style'] === 'sec-25-50') {
-    $elm = '<div class="sec-25-50 '.$obj['class'].'" >';
+    $elm = '<div class="sec-25-50 '.$obj['class'].' '.$obj['color'].'" >';
     $elm .= '<div class="col-1 col-md-6">';
     $elm .= $obj['image'] ? '<img alt="" src="'.$obj['image'].'">' : '';
     $elm .= '</div>';
-    $elm .= '<div class="col-2 col-md-6">';
+    $elm .= '<div class="col-2 sec-details col-md-6 '.$obj['textClass'].'">';
+    $elm .= $obj['title'] ? ('<h3>'.$obj['title'].'</h3>') : '';
     $elm .= $obj['content'] ? $obj['content'] : '';
     $elm .= $obj['btnText'] ? '<div class="sec-button"><a class="btn btn-primary-outline '.$obj['color'].'" href="'.$obj['href'].'">'.$obj['btnText'].'</a></div>' : '';
     $elm .= '</div>';
